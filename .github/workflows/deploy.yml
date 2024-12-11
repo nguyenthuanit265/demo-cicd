@@ -76,4 +76,4 @@ jobs:
               echo "Container failed to start"
               docker logs app-container-demo-cicd
               exit 1
-            fi
+          
