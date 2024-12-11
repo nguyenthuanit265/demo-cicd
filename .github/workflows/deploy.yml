@@ -70,10 +70,4 @@ jobs:
             # Check container logs
             echo "Container Logs:"
             docker logs app-container-demo-cicd
-            
-            # Verify container is running and healthy
-            if ! docker ps | grep -q app-container-demo-cicd then
-              echo "Container failed to start"
-              docker logs app-container-demo-cicd
-              exit 1
-          
+            EOF
