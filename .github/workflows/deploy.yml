@@ -28,7 +28,7 @@ jobs:
           mkdir -p src/main/resources
           cat > src/main/resources/application.yml << EOF
           server:
-            port: ${{ secrets.SERVER_PORT }}
+            port: 8082
           spring:
             application:
               name: demo-cicd
@@ -61,7 +61,7 @@ jobs:
             # Run the new container
             docker run -d \
               --name app-container-demo-cicd \
-              -p ${{ secrets.SERVER_PORT }}:${{ secrets.SERVER_PORT }} \
+              -p 8082:8082 \
               ${{ env.DOCKER_IMAGE }}:${{ github.sha }}
             
             # Wait for container to start
