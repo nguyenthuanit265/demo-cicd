@@ -15,6 +15,6 @@ public class HelloController {
 
     @GetMapping("/public")
     public ResponseEntity<?> publicEndpoint() {
-        return ResponseEntity.ok("This is a public endpoint v6");
+        return ResponseEntity.ok("This is a public endpoint v7");
     }
 }
